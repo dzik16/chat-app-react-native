@@ -1,0 +1,27 @@
+image: reactnativecommunity/react-native-android
+
+stages:
+  - build
+
+cache:
+  key: ${CI_PROJECT_ID}
+  paths:
+    - android/.gradle/
+
+build-and-send-to-telegram:
+  stage: build
+  script:
+    - yarn install
+    - cd android
+    - chmod +x ./gradlew
+    - ./gradlew assembleRelease
+    - cd app/build/outputs/apk/release/
+    - "curl -X POST -H 'Content-Type: multipart/form-data' -F text='🍊 App Release! ✅' -F chat_id=$TG_CHAT_ID $TG_BOT_TOKEN/sendMessage"
+    - "curl -X POST -H 'Content-Type: multipart/form-data' -F document=@app-release.apk -F chat_id=$TG_CHAT_ID $TG_BOT_TOKEN/sendDocument"
+  
+  artifacts:
+    paths:
+      - android/app/build/outputs/apk/
+    
+  only:
+    - master

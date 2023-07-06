@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "839610438331",
+    "project_id": "rn-pacapa-chat",
+    "storage_bucket": "rn-pacapa-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839610438331:android:22e6327823a9c63e78cf9e",
+        "android_client_info": {
+          "package_name": "com.pacapa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839610438331-np67iabdecbb37nc6gvoptbc94hvhcbt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAI2Ae5yz8OBL6-cGda3laYIXK3M15WZ48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839610438331-np67iabdecbb37nc6gvoptbc94hvhcbt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
